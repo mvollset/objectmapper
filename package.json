@@ -1,0 +1,11 @@
+{
+  "name": "objectmapper",
+  "version": "0.0.1",
+  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
+  "main": "index.js",
+  "repository": "",
+  "author": "Martin Vollset<mvollset@gmail.com>",
+  "dependencies": {
+  
+  }
+}
