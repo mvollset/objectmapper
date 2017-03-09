@@ -24,7 +24,7 @@ console.dir(res,true);
 
 ##More examples##
 
-###Fixed values###:
+###Fixed values###
 ```js
 var themap = {
         "value1": "value1",
@@ -45,7 +45,7 @@ console.dir(res,true);
 //{ value1: 2, value2: 3, sumOfValue: "Yihaa" }
 //
 ```
-###Nested values###:
+###Nested values###
 ```js
 var themap = {
         "value1": "value1",
