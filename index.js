@@ -35,18 +35,18 @@ mapper.flatten = function(mapobject, prefix) {
   var keys = _.keys(mapobject);
   for (var i = 0; i < keys.length; i++) {
     let m = mapobject[keys[i]];
+    var prefixedKey=prefix + keys[i]
     if (_.isObject(m) && !_.isFunction(m)) {
       if (m.$fixed === true) {
-        res[keys[i]] = m;
+        res[prefixedKey] = m.value;
       }
       else
-        res = _.extend(res, mapper.flatten(m, prefix + keys[i]));
+        res = _.extend(res, mapper.flatten(m,prefixedKey));
     }
     if (_.isFunction(m) || !_.isObject(m)) {
-      res[prefix + keys[i]] = m;
+      res[prefixedKey] = m;
     }
   }
-  console.dir(res);
   return res;
 }
 mapper.create = function(mapobject) {

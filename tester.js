@@ -11,13 +11,14 @@ var articlemap = {
             "test":"value3",
             "test3":"value1",
             level:{
-                level:"sub.test"
+                value:"sub.test",
+                $fixed:true
             }
         },
         "sub.test2":"value3",
         "sub2":{
             name:"aa",
-            value:"sub.test",
+            value:"nok en verdi",
             $fixed:true
         },
         
@@ -34,14 +35,19 @@ var result=map.map({
         test:"Yihaa"
     }
 });
+console.dir(result);
 var themap = {
         "value1": "value1",
         "value2": "value2",
-        "sumOfValue":function(value,sourceobject){
-            return {
-                    value:sourceobject.value1 + sourceobject.value2
-            }
-        }
+        //You can nest object
+        "someObject":{
+               val:"value1",
+               someInnerObject:{
+               val2:"value2"
+               }
+        },
+        //Or write with . notation
+        "someObject.someInnerObject.val1":"value1"
 }
 //var mapper=requirer('objectmapper');
 var map=mapper.create(themap);
@@ -49,6 +55,5 @@ var res=map.map({
     value1:2,
     value2:3
 });
-console.dir(res);
-
+console.dir(res,true);
         
