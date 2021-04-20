@@ -7,7 +7,7 @@ var themap = {
         "value1": "value1",
         "value2": "value2",
         "sumOfValue":function(value,sourceobject){
-            return sourceobject.value1 + sourceobject.value2
+            return {value:sourceobject.value1 + sourceobject.value2}
         }
 }
 var mapper=requirer('objectmapper');
